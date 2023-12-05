@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dotscreen Technical Test</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <h1 id="page-title">
+        Dotscreen Technical Test - Dorian Gomes
+    </h1>
+    <div id="game-info">
+        <p id="game-description">
+            The goal is to connect 4 pieces of your own color in line vertically, horizontally or diagonally before the opponent to do so.
+            <br>
+            If  neither player gets the wind , and the gameboard has been completely filled, then the game ends in a draw.
+        </p>
+        <div id="game-players">
+            <div id="game-player-one">
+                <div class="game-player-indicator"></div>
+                <p>Player One</p>
+            </div>
+            <div id="game-player-two">
+                <div class="game-player-indicator"></div>
+                <p>Player Two</p>
+            </div>
+        </div>
+    </div>
+    <div id="game-container"></div>
+    <div id="game-end">
+        <div class="backdrop-shadow"></div>
+        <div id="game-popup">
+            <p id="game-end-message">Player one win !</p>
+            <button id="game-reset-button">Restart game</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

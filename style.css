@@ -1,0 +1,148 @@
+body {
+    background: radial-gradient(#162775, #040616);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#page-title {
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#game-info {
+    display: block;
+    width: 700px;
+    margin: auto;
+    display: flex;
+    gap: 30px;
+}
+
+#game-description {
+    color: white;
+    flex: 3;
+}
+
+#game-players {
+    color: white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#game-players > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.game-player-indicator {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+#game-player-one .game-player-indicator {
+    background: #95c3ff;
+}
+
+#game-player-two .game-player-indicator {
+    background: #e5b15f;
+}
+
+#game-end {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+}
+
+#game-end.visible {
+    display: block;
+}
+
+.backdrop-shadow {
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+}
+
+#game-popup {
+    width: 300px;
+    height: 130px;
+    background: #315489;
+    left: calc(50% - 150px);
+    top: calc(50% - 65px);
+    position: absolute;
+    border-radius: 30px;
+    box-shadow: 0px 10px 50px 5px black;
+}
+
+#game-end-message {
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+}
+
+#game-popup button {
+    outline: none;
+    margin: auto;
+    display: block;
+    width: 50%;
+    height: 30px;
+    background: white;
+    color: #2e2e7f;
+    font-weight: bolder;
+    font-size: large;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+}
+
+#game-container {
+    display: flex;
+    width: fit-content;
+    background: rgb(144 140 175);
+    padding: 5px;
+    border-radius: 50px;
+    mix-blend-mode: hard-light;
+    margin: auto;
+}
+
+.connect-four-col {
+    flex-direction: column-reverse;
+    display: flex;
+}
+
+.connect-four-case {
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.connect-four-case::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    border-radius: 100%;
+}
+
+.connect-four-case.empty::after {
+    background: #7f7f7f;
+}
+
+.connect-four-case.case-blue::after {
+    background: #95c3ff;
+}
+
+.connect-four-case.case-orange::after {
+    background: #e5b15f;
+}
